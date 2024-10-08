@@ -18,7 +18,7 @@ function App() {
 
   }
   return (
-    <div>
+    <div className='center'>
       I am writing a code. and count is {count}
       <br/>
       <button onClick={increaseCount}>increase</button>
