@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
+import Display from './Display';
+import Control from './Control';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -19,14 +21,17 @@ function App() {
   }
   return (
     <div className='center'>
-      I am writing a code. and count is {count}
+      <Display countL={count} />
+      <Control increase={increaseCount}
+               decrease={decreaseCount}
+               reset={resetCount}
+
+      
+      />
+
       <br/>
-      <button onClick={increaseCount}>increase</button>
-      <button onClick={decreaseCount}>decrease</button>
-      <button onClick={resetCount}>reset</button>
-
-    </div>
-
+      
+</div>
   );
 }
 
