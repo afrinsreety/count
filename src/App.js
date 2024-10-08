@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [count, setCount] = useState(0);
+
+  function increaseCount(){
+    setCount(count+1);
+    console.log("increasing..", count);
+  }
+  function decreaseCount(){
+    setCount(count-1);
+    console.log("decreasing..", count);
+  }
+  function resetCount(){
+    setCount(0);
+
+
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      I am writing a code. and count is {count}
+      <br/>
+      <button onClick={increaseCount}>increase</button>
+      <button onClick={decreaseCount}>decrease</button>
+      <button onClick={resetCount}>reset</button>
+
     </div>
+
   );
+ 
+ 
+ 
+
+  
 }
 
 export default App;
